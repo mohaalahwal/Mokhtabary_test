@@ -5,16 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mokhtabary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="vedors/normalize.css">
+    <link rel="stylesheet" href="vedors/all.min.css">
     <link rel="stylesheet" href="sass/style.css">
+    <script src="js/main.js"></script>
 </head>
 
 <body>
-    <div class="scroler"></div>
-
-    <div class="style">
-        hello every one
+    <!-- start header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href=""><img src="/images/logo/mokhtabary.png" alt=""></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">الرئيسية</a></li>
+                    <li><a href="#">اتصل بنا</a></li>
+                    <li><a href="#">عن مختبري</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="search">
+        <div class="container">
+            <div class="overlay"></div>
+            <div class="heading">
+                <h1>نتمني لكم الصحة والعافية</h1>
+                <p>يمكنكم الان اجراء التحاليل والاشعة الطبية باقل تكلفه بطريقه بحث سهله وامنه</p>
+            </div>
+            <div class="form">
+                <form action="" class="main-search">
+                    <select name="" id="gov">
+                        <option value="">القاهرة</option>
+                        <option value="">الاسكندرية</option>
+                        <option value="">بني سويف</option>
+                    </select>
+                    <select name="" id="city">
+                        <option value="">امبابة</option>
+                        <option value="">البدرشين</option>
+                        <option value="">ميامي</option>
+                    </select>
+                    <button class="submit">ابحث</button>
+                </form>
+            </div>
+        </div>
     </div>
-    <script src="js/main.js"></script>
+    <!-- End header -->
 </body>
 
 </html>

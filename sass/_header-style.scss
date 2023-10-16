@@ -1,0 +1,46 @@
+// start header
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+
+        .logo {
+
+            img {
+                width: 130px;
+                height: 40px;
+            }
+        }
+
+        nav {
+            flex: 1;
+
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 20px;
+
+                a {
+                    padding-bottom: 20px;
+                    color: var(--blue-1);
+                    font-size: 16px;
+                    font-weight: 600;
+
+                    &.active,
+                    &:hover {
+                        color: var(--green-2);
+                        // border-bottom: 3px solid var(--green-1);
+                    }
+                }
+            }
+        }
+    }
+}

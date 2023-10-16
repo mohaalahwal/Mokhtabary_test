@@ -1,0 +1,13 @@
+.search {
+    background-image: url(../images/background/5570869.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}

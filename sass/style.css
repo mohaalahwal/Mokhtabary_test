@@ -1,13 +1,124 @@
-body {
-  min-height: 5000px;
-  margin: 0;
+:root {
+  --blue-1: #1f2a4a;
+  --green-1: #04cfbb;
+  --green-2: #00918a;
+  --gray-1: #333;
+  --gray-2: #ccc;
+  --gray-3: #eee;
 }
 
-.scroler {
-  width: 100px;
-  height: 10px;
-  background-color: blue;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  transition: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 900px;
+  margin: 0px auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 500px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 700px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 950px;
+  }
+}
+/* some components*/
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+  min-width: 100%;
+  background-color: rgba(51, 51, 51, 0.4352941176);
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heading h1 {
+  color: var(--green-2);
+}
+.heading p {
+  line-height: 1.6;
+  color: var(--blue-1);
+}
+
+header {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+header .container .logo img {
+  width: 130px;
+  height: 40px;
+}
+header .container nav {
+  flex: 1;
+}
+header .container nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+header .container nav ul a {
+  padding-bottom: 20px;
+  color: var(--blue-1);
+  font-size: 16px;
+  font-weight: 600;
+}
+header .container nav ul a.active, header .container nav ul a:hover {
+  color: var(--green-2);
+}
+
+.search {
+  background-image: url(../images/background/5570869.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.search .container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */
