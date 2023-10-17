@@ -50,17 +50,6 @@ a {
   }
 }
 /* some components*/
-.overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  min-height: 100%;
-  min-width: 100%;
-  background-color: rgba(51, 51, 51, 0.4352941176);
-  z-index: -1;
-  opacity: 0.1;
-}
-
 .heading {
   display: flex;
   flex-direction: column;
@@ -79,7 +68,19 @@ header {
   position: fixed;
   top: 0;
   left: 50%;
+  width: 100%;
   transform: translateX(-50%);
+  z-index: 999999;
+  background-color: white;
+}
+header::after {
+  content: "";
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: 1px solid var(--gray-3);
 }
 header .container {
   display: flex;
@@ -113,12 +114,66 @@ header .container nav ul a.active, header .container nav ul a:hover {
 .search {
   background-image: url(../images/background/5570869.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
+}
+.search .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(var(--green-1), var(--green-2));
+  opacity: 0.1;
 }
 .search .container {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 50px;
+  box-shadow: 100% 100% 0.2 #333;
+}
+.search .container .main_heading {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search .container .main_heading h2 {
+  color: var(--green-1);
+  font-weight: bold;
+}
+.search .container .main_heading p {
+  line-height: 1.5;
+  color: var(--gray-2);
+}
+.search .container .main_srh {
+  position: relative;
+}
+.search .container .main_srh input {
+  width: 400px;
+  padding: 20px 20px;
+  color: var(--gray-1);
+  border-radius: 50px;
+  background-color: white;
+  border: 1px solid var(--gray-3);
+  font-weight: bold;
+}
+.search .container .main_srh input::-moz-placeholder {
+  color: #333;
+  font-weight: lighter;
+}
+.search .container .main_srh input::placeholder {
+  color: #333;
+  font-weight: lighter;
+}
+.search .container .main_srh i {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  padding: 20px;
+  font-size: 20px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
