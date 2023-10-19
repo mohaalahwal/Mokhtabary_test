@@ -1,50 +1,49 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html dir="rtl" lang="ar">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mokhtabary</title>
+    <title>مختبري</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="vedors/normalize.css">
-    <link rel="stylesheet" href="vedors/all.min.css">
     <link rel="stylesheet" href="sass/style.css">
-    <script src="js/main.js"></script>
 </head>
 
 <body>
-    <!-- start header -->
+    <!-- start header section -->
     <header>
         <div class="container">
-            <div class="logo">
-                <a href=""><img src="images/logo/mokhtabary.png" alt=""></a>
+            <div class="menu">
+                <nav>
+                    <span class="material-symbols-outlined main_nav_icon">
+                        menu
+                    </span>
+                    <ul id="main_list">
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">من نحن </a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#" class="active">الرئيسية</a></li>
-                    <li><a href="#">اتصل بنا</a></li>
-                    <li><a href="#">عن مختبري</a></li>
-                </ul>
-            </nav>
+            <div class="logo"><img src="images/logo/mokhtabary.png" alt="مختبري"></div>
         </div>
     </header>
-    <!-- End header -->
-    <div class="search">
-        <div class="overlay"></div>
+    <!-- end header section -->
+    <!-- start main section -->
+    <div class="main_section">
         <div class="container">
-            <div class="main_heading">
-                <h2>نتمني لكم دائما الصحة والعافية</h2>
-                <p>اختر التحاليل عن طريق كتابة اسم التحليل فقط</p>
-            </div>
-            <div class="main_srh">
-                <input type="text" name="" id="main_Srh" placeholder="اكتب اسم التحليل">
-                <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="search">
+
             </div>
         </div>
     </div>
+    <!-- end main section -->
+    <script src="js/header.js"></script>
 </body>
 
 </html>
