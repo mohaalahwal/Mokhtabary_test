@@ -37,6 +37,8 @@ header {
   left: 0;
   top: 0;
   width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid var(--gray-1);
 }
 header .container {
   padding: 20px 10px;
@@ -49,6 +51,7 @@ header .container .menu nav {
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  position: relative;
 }
 header .container .menu nav .main_nav_icon {
   color: var(--main-color);
@@ -64,6 +67,9 @@ header .container .menu nav .main_nav_icon::selection {
 }
 header .container .menu nav ul {
   display: none;
+  position: absolute;
+  right: 0;
+  top: 55px;
 }
 header .container .menu nav ul li a {
   width: 200px;
@@ -86,10 +92,31 @@ header .container .menu nav ul li a::selection {
 header .container .menu nav ul.active {
   display: block;
 }
+header .container .menu nav ul::before {
+  content: "";
+  border-style: solid;
+  border-width: 15px;
+  border-color: transparent transparent var(--gray-2) transparent;
+  position: absolute;
+  margin-top: -30px;
+  right: 1;
+}
 header .container .logo img {
   width: 100px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+header .container .social_links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .container .social_links a {
+  color: var(--main-color);
+  padding: 0px 5px;
+}
+header .container .social_links a i {
+  font-size: 20px;
 }
 
 .main_section {

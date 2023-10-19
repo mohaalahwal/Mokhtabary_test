@@ -3,6 +3,8 @@ header {
     left: 0;
     top: 0;
     width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid var(--gray-1);
 
     .container {
         padding: 20px 10px;
@@ -17,6 +19,7 @@ header {
                 justify-content: center;
                 align-items: center;
                 z-index: 9999;
+                position: relative;
 
                 .main_nav_icon {
                     color: var(--main-color);
@@ -31,6 +34,9 @@ header {
 
                 ul {
                     display: none;
+                    position: absolute;
+                    right: 0;
+                    top: 55px;
 
                     li {
                         a {
@@ -55,6 +61,17 @@ header {
                     &.active {
                         display: block;
                     }
+
+                    &::before {
+                        content: "";
+                        border-style: solid;
+                        border-width: 15px;
+                        border-color: transparent transparent var(--gray-2) transparent;
+                        position: absolute;
+                        margin-top: -30px;
+                        right: 1;
+
+                    }
                 }
 
             }
@@ -64,6 +81,21 @@ header {
             img {
                 width: 100px;
                 object-fit: contain;
+            }
+        }
+
+        .social_links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a {
+                color: var(--main-color);
+                padding: 0px 5px;
+
+                i {
+                    font-size: 20px;
+                }
             }
         }
     }
